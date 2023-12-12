@@ -61,7 +61,7 @@ int branch_leakage(uint8_t *input, int inputLength)
 //            break;
 //    }
 //	return lookup[0] + inputLength;
-    return result
+    return result;
 }
 
 int loop_leakage(uint8_t *input, int inputLength)
