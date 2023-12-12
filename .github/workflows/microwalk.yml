@@ -25,7 +25,7 @@ jobs:
       - name: Upload analysis result
         uses: github/codeql-action/upload-sarif@v2
         with:
-          sarif_file: ${{ github.workspace }}/${{ env.script_directory }}/results/report-target-loop-leakage.sarif
+          sarif_file: ${{ github.workspace }}/${{ env.script_directory }}/results/report.sarif
           checkout_path: ${{ github.workspace }}
       
       - name: Archive analysis artifacts
