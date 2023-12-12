@@ -16,8 +16,8 @@ static int NOINLINE branch_leakage_util(uint8_t data)
     if(data < 79)
         return 7;
     
-    if(data < 119)
-        return data;
+//    if(data < 119)
+//        return data;
         
     return 19 * data + 23;
 }
