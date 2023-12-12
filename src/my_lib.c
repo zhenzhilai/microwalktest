@@ -30,7 +30,7 @@ int branch_leakage(uint8_t *input, int inputLength)
     for(int i = 0; i < inputLength; ++i)
             //result += branch_leakage_util(input[i]);
         if (input[i] <= 80)
-            break
+            break;
 	return lookup[0] + inputLength;
 }
 
