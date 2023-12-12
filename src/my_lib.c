@@ -23,6 +23,14 @@ void lookup_leakage(uint8_t *input, int inputLength, uint8_t *output)
 int branch_leakage(uint8_t *input, int inputLength)
 {
 	// Empty and constant time
+    
+    // add leakages
+    int result = 0;
+    
+    for(int i = 0; i < inputLength; ++i)
+            //result += branch_leakage_util(input[i]);
+        if (input[i] <= 80)
+            break
 	return lookup[0] + inputLength;
 }
 
