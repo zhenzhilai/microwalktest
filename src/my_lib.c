@@ -47,7 +47,7 @@ int branch_leakage(uint8_t *input, int inputLength)
 	// Empty and constant time
     
     // add leakages
-    int result = 0;
+    volatile int result = 0;
         
         for(int i = 0; i < inputLength; ++i)
             result += branch_leakage_util(input[i]);
