@@ -12,6 +12,8 @@
 #include <stddef.h>
 #include <string.h>
 
+//#include "kyber512/compiletest.h"
+
 
 #define NOINLINE __attribute__((noinline))
 
@@ -46,11 +48,13 @@ void init(void)
 
 int branch_leakage(uint8_t *input, int inputLength)
 {
-	
-    uint8_t pk[KYBER_PUBLICKEYBYTES];
-    uint8_t sk[KYBER_SECRETKEYBYTES];
+//    int testint;
+//    testint = test_fun();
     
-    PQCLEAN_KYBER512_CLEAN_crypto_kem_keypair(pk, sk);
+        uint8_t pk[KYBER_PUBLICKEYBYTES];
+        uint8_t sk[KYBER_SECRETKEYBYTES];
+    
+        PQCLEAN_KYBER512_CLEAN_crypto_kem_keypair(pk, sk);
     
     
     
