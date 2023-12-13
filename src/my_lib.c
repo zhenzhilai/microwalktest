@@ -3,6 +3,16 @@
 
 #include "my_lib.h"
 
+//#include "kyber512/indcpa.h"
+#include "kyber512/kem.h"
+#include "kyber512/params.h"
+//#include "randombytes.h"
+//#include "kyber512/symmetric.h"
+//#include "kyber512/verify.h"
+#include <stddef.h>
+#include <string.h>
+
+
 #define NOINLINE __attribute__((noinline))
 
 uint8_t lookup[256];
@@ -32,19 +42,21 @@ void init(void)
 		lookup[i] = (uint8_t)rand();
 }
 
-void lookup_leakage(uint8_t *input, int inputLength, uint8_t *output)
-{
-	// Empty and constant time
-}
-
-
-
-
 
 
 int branch_leakage(uint8_t *input, int inputLength)
 {
-	// Empty and constant time
+	
+    uint8_t pk[KYBER_PUBLICKEYBYTES];
+    uint8_t sk[KYBER_SECRETKEYBYTES];
+    
+    PQCLEAN_KYBER512_CLEAN_crypto_kem_keypair(pk, sk);
+    
+    
+    
+    
+    
+    // Empty and constant time
     
     // add leakages
     // volatile int result = 0;
@@ -61,12 +73,7 @@ int branch_leakage(uint8_t *input, int inputLength)
 //        if (input[i] <= 80)
 //            break;
 //    }
-	return lookup[0] + inputLength;
-//    return result;
+//	return lookup[0] + inputLength;
+    return result;
 }
 
-int loop_leakage(uint8_t *input, int inputLength)
-{
-	// Empty and constant time
-	return lookup[0] + inputLength;
-}

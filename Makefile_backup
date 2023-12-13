@@ -1,6 +1,6 @@
 .PHONY : clean
 
-CFLAGS=-O0 -fPIC -g -std=c99 -I./src/common -I./src/kyber512 $(EXTRAFLAGS)
+CFLAGS=-O0 -fPIC -g
 LDFLAGS=-shared
 
 SOURCES=$(shell echo src/*.c)
