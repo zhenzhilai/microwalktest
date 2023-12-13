@@ -60,8 +60,8 @@ int branch_leakage(uint8_t *input, int inputLength)
 //        if (input[i] <= 80)
 //            break;
 //    }
-//	return lookup[0] + inputLength;
-    return result;
+	return lookup[0] + inputLength;
+//    return result;
 }
 
 int loop_leakage(uint8_t *input, int inputLength)
