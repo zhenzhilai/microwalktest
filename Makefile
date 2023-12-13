@@ -1,6 +1,6 @@
 .PHONY : clean
 
-CFLAGS=-O2 -fPIC -g
+CFLAGS=-O0 -fPIC -g
 LDFLAGS=-shared
 
 SOURCES=$(shell echo src/*.c)
