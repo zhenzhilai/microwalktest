@@ -44,14 +44,28 @@ preprocess:
   
 analysis:
   modules:
-    - module: control-flow-leakage
+    - module: instruction-memory-access-trace-leakage
       module-options:
         output-directory: $$WORK_DIR$$/persist/results
         map-files:
           - $$TARGET_PATH$$.map
           - libexample.map
-        dump-call-tree: false
-        include-testcases-in-call-stacks: false
+
+    # - module: call-stack-memory-access-trace-leakage
+    #   module-options:
+    #     output-directory: $$WORK_DIR$$/persist/results
+    #     map-files:
+    #       - $$TARGET_PATH$$.map
+    #       - libexample.map
+
+    # - module: control-flow-leakage
+    #   module-options:
+    #     output-directory: $$WORK_DIR$$/persist/results
+    #     map-files:
+    #       - $$TARGET_PATH$$.map
+    #       - libexample.map
+    #     dump-call-tree: false
+    #     include-testcases-in-call-stacks: false
         
   options:
     input-buffer-size: 1
