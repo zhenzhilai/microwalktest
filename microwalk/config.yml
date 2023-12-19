@@ -55,7 +55,6 @@ analysis:
     - module: call-stack-memory-access-trace-leakage
       module-options:
         output-directory: $$WORK_DIR$$/persist/results
-        output-format: json
         map-files:
           - $$TARGET_PATH$$.map
           - libexample.map
