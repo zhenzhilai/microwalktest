@@ -84,10 +84,15 @@ int branch_leakage(uint8_t *input, int inputLength)
     uint8_t sendb[CRYPTO_CIPHERTEXTBYTES];
     uint8_t sk_a[CRYPTO_SECRETKEYBYTES];
 
-    crypto_kem_keypair(pk, sk_a);
+    //crypto_kem_keypair(pk, sk_a);
     
-    
-    
+    int test_b = rand() % 10;
+    volatile aaaa = 1;
+	if (test_b % 2 == 0)
+		aaaa += 2;
+	else
+		aaaa += 3;
+    return aaaa;
     
     // Empty and constant time
     
